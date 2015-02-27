@@ -19,7 +19,7 @@ var ItemView = Backbone.Marionette.ItemView.extend({
 
 	initialize: function() {
 		console.log('itemView initialize');
-		this.listenTo(this.model, 'change', this.modelChangeHandler);
+		// this.listenTo(this.model, 'change', this.modelChangeHandler);
 	},
 
 	//triggered when showing the view in a Region causes it to be attached to the "document"
@@ -27,7 +27,7 @@ var ItemView = Backbone.Marionette.ItemView.extend({
 	//2. can be passed down to nested children views
 	//more interesting info: http://marionettejs.com/docs/v2.3.2/marionette.view.html#view-attach--onattach-event
 	onAttach: function() {
-		console.log('i\'m attached');
+		console.log('ItemView onAttach');
 	},
 
 	//called on the view instance when the view has been rendered and displayed
