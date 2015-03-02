@@ -48,5 +48,40 @@ $(document).ready(function() {
 		container: '.container'
 	});
 
-	myApp.getRegion('container').show(layoutView_2);
+	var containerRegion = myApp.getRegion('container');
+
+	containerRegion.on('show', function(view, region, options) {
+		console.log('container region show');
+	});
+
+	containerRegion.on('before:swap', function() {
+		console.log('container region before swap');
+	});
+
+	containerRegion.show(layoutView_2);
+
+	setTimeout(function() {
+		containerRegion.show(new ItemView_2());
+	}, 1000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 });
